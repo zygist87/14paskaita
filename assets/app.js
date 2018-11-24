@@ -1,4 +1,4 @@
-"ese strict"
+"use strict";
 let test = [12, 929, 11, 3, 199];
 function my (param) {
   let result = "";
@@ -97,7 +97,7 @@ console.log(food);
 
 console.log("-------------------------------");
 
-let savingAccount = {
+let savingsAccount = {
   balance: 1000,
   interestRatePercent: 1,
   deposit: function addMoney(amount) {
@@ -111,5 +111,9 @@ let savingAccount = {
       savingsAccountBalance -= amount;
     }
   },
+  printAccountSummary: function printAccountSummary() {
+    return `Wellcome!
+    Your balance is currently $${savingsAccount.balance} and your interest rate is ${savingsAccount.interestRatePercent} %`
+  },
 };
-console.log("Wellcome, Your account balance is currently" + balance + "And your interest rate is" + interestRatePercent);
+console.log(savingsAccount.printAccountSummary());
